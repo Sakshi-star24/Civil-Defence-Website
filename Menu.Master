@@ -1,0 +1,216 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="Civil_Defence.Menu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Civil Defence Department</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link href="Bootstrap/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        #search
+        {
+           float:right;
+           margin:0;
+           padding:0;
+        }
+        .head
+        {
+            margin-top:100px;
+
+            
+        }
+        #AS_logo, #CD_logo{
+            width:180px;
+            height:180px;
+            
+        }
+        .menu{
+            margin-top:200px;
+        }
+        #AS_logo{
+            margin-left:50px;
+            
+        }
+        #Fire{
+            width:200px;
+            height:180px;
+            float:right;
+            margin-right:50px;
+        }
+        #CD_logo{
+            float:right;
+            margin-right:50px;
+        }
+        
+        .topnav{
+            margin-top:50px;
+            background-color:#fedcba;
+            
+        }
+        .topnav a{
+            color:#f04040;
+            
+            text-decoration:none;
+            font-size:18px;
+            text-align:center;
+        }
+        .topnav a:hover{
+            background-color:chocolate;
+            color:white;
+        }
+        .topnav a:active{
+            background-color:orange;
+            color:white;
+        }
+        #b1{
+            font-size:30px;
+        }
+        #b2{
+            font-size:25px;
+        }
+        /*ul{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            
+        }*/
+        li{
+            float:left;
+        }
+        /*li a, .dropbtn{
+            display:inline-block;
+            color:white;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration:none;
+        }
+        li a:hover, .dropdown:hover{
+            background-color:inherit;
+        }
+        li .dropdown{
+            display:inline-block;
+        }
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            background-color:#f9f9f9;
+            min-width:160px;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index:1;
+        }
+        .dropdown-content a{
+            color:black;
+            padding:12px 16px;
+            text-decoration:none;
+            display:block;
+            text-align:right;
+        }
+        .dropdown-content a:hover{background-color:#f1f1f1;}
+        .dropdown:hover .dropdown-content{display:block;}*/
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+                <div class="top" style="text-align:center; font-size:12px; margin:0; padding:0;">Facebook/twitter/youtube link&emsp;&emsp;&emsp;Call Us: 0141-2280283 &emsp; Email Us: <u>dir.cdraj@rajasthan.gov.in</u>
+                    </div>
+                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="search">
+                        <div class="form-inline">
+                            <input class="form-control mr-sm-2" type="text" placeholder="SEARCH" />
+                            <asp:Button ID="search_btn" CssClass="btn btn-success" runat="server" Text="Search" type="submit" />
+                        </div>
+                    </nav>
+                <div class="head">
+                    
+                        <img src="images/National-Emblem-1.jpg" id="AS_logo" />
+                    <b id="b1">Govt. of Rajasthan</b>&emsp;&emsp;&emsp;
+                        <sub><b id="b2"><i>Department of Civil Defence</i></b></sub>
+                         
+                        <img src="images/CD%20logo.jpg" id="CD_logo" />
+                        <img src="images/Fire-Department-Logo.png" id="Fire"/>
+
+                </div>
+            
+                <div class="topnav">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Home.aspx">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CIVIL DEFENCE</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">FIRE SERVICE</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">About Fire Service</a>
+                                <a href="#" class="dropdown-item">Active Fire Stations</a>
+                                <a href="MassAware.aspx" class="dropdown-item">Mass Awareness on Fire Safety</a>
+                                <a href="FireLegi.aspx" class="dropdown-item">Fire Legislation</a>
+                                <a href="Firetrain.aspx" class="dropdown-item">Fire Training</a>
+                                <a href="#" class="dropdown-item">Courses</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">RTI</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">RTI Officers List</a>
+                                <a href="#" class="dropdown-item">RTI Rules or Circulars</a>
+                                <a href="#" class="dropdown-item">Information of RTI Rules</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">REPORTS</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Annual</a>
+                                <a href="#" class="dropdown-item">Quartely</a>
+                                <a href="#" class="dropdown-item">Monthly</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">EMPLOYEE</a>
+                            <div class="dropdown-menu">
+                                <a href="PermStaff.aspx" class="dropdown-item">Permanent Staff</a>
+                                <a href="#" class="dropdown-item">Staff of Fire Services</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">DOWNLOADS</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Circulars</a>
+                                <a href="#" class="dropdown-item">Latest Orders</a>
+                                <a href="#" class="dropdown-item">PL Leave Application Form</a>
+                                <a href="#" class="dropdown-item">Recruitment of CD Volunteers Form</a>
+                                <a href="#" class="dropdown-item">ID Card</a>
+                                <a href="#" class="dropdown-item">ABCD Form</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">CONTACT</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Contact Us</a>
+                                <a href="CivilDefence.aspx" class="dropdown-item">Civil Defence</a>
+                                <a href="FireServie.aspx" class="dropdown-item">Fire Services</a>
+                                <a href="#" class="dropdown-item">CDTI</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
